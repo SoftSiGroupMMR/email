@@ -15,7 +15,7 @@ import java.io.IOException;
 @SpringBootApplication
 public class RabbitApplication
 {
-    private final static String QUEUE_NAME = "travelRequest";
+    private final static String QUEUE_NAME = "email";
 
     public static void main(String[] args) throws Exception
     {

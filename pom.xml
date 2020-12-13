@@ -8,10 +8,10 @@
         <version>2.1.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>dk.dd</groupId>
-    <artifactId>rabbit</artifactId>
+    <groupId>dk.si.email</groupId>
+    <artifactId>email</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rabbit</name>
+    <name>email</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -46,6 +46,13 @@
             <artifactId>mail</artifactId>
             <version>1.4.7</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
+        </dependency>
+
 
     </dependencies>
 

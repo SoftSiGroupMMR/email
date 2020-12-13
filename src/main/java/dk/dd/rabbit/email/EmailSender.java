@@ -1,9 +1,15 @@
 package dk.dd.rabbit.email;
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
 import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
+
 
 public class EmailSender {
 
@@ -49,20 +55,23 @@ public class EmailSender {
         }
     }
 
-
-    public static void main(String[] args) {
-        String subject = "Håber det virker";
-        String body = "Test?!";
-        String[] recipients = {"Rasmusljacobsen@live.com"};
-        sendFromGMail(recipients, subject, body);
-    }
+    //html=TRUE, inline=FALSE
+    //<img src="https://blog.mailtrap.io/wp-content/uploads/2018/11/blog-illustration-email-embedding-images.png?w=640" alt="img" />
 
     public void sendEmail(String body) {
         String subject = "Håber det virker";
         String[] recipients = {"Rasmusljacobsen@live.com"};
-        sendFromGMail(recipients, subject, body);
-    }
 
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonParser jp = new JsonParser();
+        JsonElement je = jp.parse(body);
+        String prettyJsonString = gson.toJson(je);
+
+        sendFromGMail(recipients, subject, prettyJsonString);
+
+
+    }
 
 
 }
