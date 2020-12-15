@@ -1,4 +1,4 @@
-package dk.dd.rabbit;
+package dk.si.emailsender;
 /*
  * Message Consumer
  *
@@ -6,11 +6,9 @@ package dk.dd.rabbit;
  * 2) Registers for notification of messages sent to its ID
  */
 import com.rabbitmq.client.*;
-import dk.dd.rabbit.email.EmailSender;
+import dk.si.emailsender.email.EmailSender;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.io.IOException;
 
 @SpringBootApplication
 public class RabbitApplication

@@ -1,4 +1,4 @@
-package dk.dd.rabbit.email;
+package dk.si.emailsender.email;
 
 
 import com.google.gson.Gson;

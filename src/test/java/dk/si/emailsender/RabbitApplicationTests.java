@@ -1,4 +1,4 @@
-package dk.dd.rabbit;
+package dk.si.emailsender;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
