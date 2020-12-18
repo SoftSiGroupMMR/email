@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RabbitApplication
 {
-    private final static String QUEUE_NAME = "email";
+    private final static String QUEUE_NAME = "email_send";
 
     public static void main(String[] args) throws Exception
     {
